@@ -1,6 +1,8 @@
 {
   "item.testmod.zircon": "Zircon",
   "item.testmod.raw_zircon": "Raw Zircon",
+  "item.testmod.eight_ball": "Eight Ball",
+
   "block.testmod.zircon_block": "Block of Zircon",
   "block.testmod.zircon_ore": "Block of Zircon Ore",
   "block.testmod.deepslate_zircon_ore": "Block of Deepslate Zircon Ore",
