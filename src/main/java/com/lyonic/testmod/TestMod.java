@@ -1,5 +1,6 @@
 package com.lyonic.testmod;
 
+import com.lyonic.testmod.block.ModBlocks;
 import com.lyonic.testmod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,6 +23,7 @@ public class TestMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
