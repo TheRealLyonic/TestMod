@@ -2,6 +2,7 @@ package com.lyonic.testmod;
 
 import com.lyonic.testmod.block.ModBlocks;
 import com.lyonic.testmod.item.ModItems;
+import com.lyonic.testmod.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -26,6 +27,7 @@ public class TestMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -34,7 +36,9 @@ public class TestMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
