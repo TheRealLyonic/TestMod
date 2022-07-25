@@ -4,6 +4,8 @@ import com.lyonic.testmod.block.ModBlocks;
 import com.lyonic.testmod.item.ModItems;
 import com.lyonic.testmod.painting.ModPaintings;
 import com.lyonic.testmod.villager.ModVillagers;
+import com.lyonic.testmod.world.feature.ModConfiguredFeatures;
+import com.lyonic.testmod.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -30,6 +32,8 @@ public class TestMod
         ModBlocks.register(modEventBus);
         ModVillagers.register(modEventBus);
         ModPaintings.register(modEventBus);
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
