@@ -22,7 +22,10 @@ public class JumpyBlock extends Block {
 
     @Override
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        player.sendSystemMessage(Component.literal("Right-Clicked this."));
+
+        if(!level.isClientSide() && hand == InteractionHand.MAIN_HAND){
+            player.sendSystemMessage(Component.literal("Right-Clicked this."));
+        }
 
         return super.use(blockState, level, blockPos, player, hand, hitResult);
     }
