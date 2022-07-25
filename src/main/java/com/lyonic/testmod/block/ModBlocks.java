@@ -2,9 +2,9 @@ package com.lyonic.testmod.block;
 
 import com.lyonic.testmod.TestMod;
 import com.lyonic.testmod.block.custom.JumpyBlock;
+import com.lyonic.testmod.block.custom.ZirconLampBlock;
 import com.lyonic.testmod.item.ModCreativeModeTab;
 import com.lyonic.testmod.item.ModItems;
-import com.mojang.blaze3d.shaders.Uniform;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -30,6 +30,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> ENDSTONE_ZIRCON_ORE = registerBlock("endstone_zircon_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.TEST_TAB);
     public static final RegistryObject<Block> NETHERRACK_ZIRCON_ORE = registerBlock("netherrack_zircon_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.TEST_TAB);
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block", () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TEST_TAB);
+    public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp", () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(6f).requiresCorrectToolForDrops().lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.TEST_TAB);
 
     public static void register(IEventBus eventBus){
         BLOCKS.register(eventBus);
