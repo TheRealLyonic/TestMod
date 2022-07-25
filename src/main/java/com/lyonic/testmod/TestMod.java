@@ -2,6 +2,7 @@ package com.lyonic.testmod;
 
 import com.lyonic.testmod.block.ModBlocks;
 import com.lyonic.testmod.item.ModItems;
+import com.lyonic.testmod.painting.ModPaintings;
 import com.lyonic.testmod.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -28,6 +29,7 @@ public class TestMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModVillagers.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
