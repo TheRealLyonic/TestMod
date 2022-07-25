@@ -8,6 +8,7 @@
   "block.testmod.deepslate_zircon_ore": "Block of Deepslate Zircon Ore",
   "block.testmod.endstone_zircon_ore": "Block of Endstone Zircon Ore",
   "block.testmod.netherrack_zircon_ore": "Block of NetherRack Zircon Ore",
+  "block.testmod.jumpy_block": "Jumpy Block",
 
   "itemGroup.testtab": "Zircon"
 }
